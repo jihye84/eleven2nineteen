@@ -119,10 +119,10 @@ function updateTitle() {
     
     if (currentState < phases.length - 1) {
         // 정답을 알 수 없게 '로'로 고정
-        titleEl.innerHTML = `${inputN}<span class="particle-box-small">${nParticle}</span> ${inputL}<span class="particle-box-small">${lParticle}</span> <span class="answer-box">?</span><span class="particle-box">로</span> 가르기 할 수 있습니다.`;
+        titleEl.innerHTML = `<span class="word-group">${inputN}<span class="particle-box-small">${nParticle}</span></span><span class="word-group">${inputL}<span class="particle-box-small">${lParticle}</span></span><span class="word-group"><span class="answer-box">?</span><span class="particle-box">로</span></span><span class="word-group">가르기 할 수 있습니다.</span>`;
     } else {
         const rParticle = hasEuroBatchim(R) ? "으로" : "로";
-        titleEl.innerHTML = `${inputN}<span class="particle-box-small">${nParticle}</span> ${inputL}<span class="particle-box-small">${lParticle}</span> <span class="answer-box highlight">${R}</span><span class="particle-box">${rParticle}</span> 가르기 할 수 있습니다.`;
+        titleEl.innerHTML = `<span class="word-group">${inputN}<span class="particle-box-small">${nParticle}</span></span><span class="word-group">${inputL}<span class="particle-box-small">${lParticle}</span></span><span class="word-group"><span class="answer-box highlight">${R}</span><span class="particle-box">${rParticle}</span></span><span class="word-group">가르기 할 수 있습니다.</span>`;
     }
 }
 
