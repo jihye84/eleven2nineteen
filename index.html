@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1학년 수학 가르기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1 id="title"></h1>
+        </header>
+        
+        <main id="board">
+            <div id="top-box" class="box"></div>
+            
+            <svg id="arrows" viewBox="0 0 1000 600" preserveAspectRatio="none">
+                <defs>
+                    <marker id="arrowhead-left" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#60a5fa" />
+                    </marker>
+                    <marker id="arrowhead-right" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#e52e71" />
+                    </marker>
+                </defs>
+                <line x1="500" y1="255" x2="245" y2="345" stroke="#60a5fa" stroke-width="6" marker-end="url(#arrowhead-left)" />
+                <line x1="500" y1="255" x2="755" y2="345" stroke="#e52e71" stroke-width="6" marker-end="url(#arrowhead-right)" />
+            </svg>
+
+            <div class="bottom-container">
+                <div id="bottom-left-box" class="box bottom-box"></div>
+                <div id="bottom-right-box" class="box bottom-box"></div>
+            </div>
+        </main>
+        
+        <div id="controls">
+            <button id="btn-new">새로운 문제</button>
+            <button id="btn-prev">◀ 이전 단계</button>
+            <button id="btn-next">다음 단계 ▶</button>
+        </div>
+    </div>
+    
+    <div id="marbles-layer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
