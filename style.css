@@ -41,10 +41,8 @@ header {
     font-weight: 900;
     color: #2c3e50;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* 모바일에서 넘치면 자연스럽게 줄바꿈 */
+    text-align: center;
+    line-height: 1.4;
     padding: 0 10px;
 }
 
@@ -86,6 +84,7 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    vertical-align: middle;
     width: clamp(50px, 10vw, 90px);
     height: clamp(45px, 9vw, 80px);
     border: clamp(2px, 0.5vw, 4px) dashed #e52e71;
@@ -109,6 +108,7 @@ header {
 
 .particle-box {
     display: inline-block;
+    vertical-align: middle;
     width: auto;
     min-width: clamp(25px, 5vw, 110px);
     text-align: left;
@@ -116,6 +116,7 @@ header {
 
 .particle-box-small {
     display: inline-block;
+    vertical-align: middle;
     width: auto;
     min-width: clamp(15px, 3vw, 60px);
     text-align: left;
