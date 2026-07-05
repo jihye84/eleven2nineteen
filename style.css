@@ -41,13 +41,16 @@ header {
     font-weight: 900;
     color: #2c3e50;
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-    text-align: center;
-    line-height: 1.4;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     padding: 0 10px;
 }
 
 .word-group {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     white-space: nowrap;
     margin-left: clamp(10px, 3vw, 25px);
 }
