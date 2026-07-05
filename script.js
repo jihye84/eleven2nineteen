@@ -67,11 +67,12 @@ function generateRandomProblem() {
 
 // 현재 N, L 설정값으로 문제 적용
 function applyProblem() {
-    // 유효성 재검사 및 기본값 설정
-    if (isNaN(N) || N <= 1) N = 2; // 최소 2
-    if (N > 50) N = 50; // 과도한 렌더링 방지 (안전 장치)
-    if (isNaN(L) || L < 1) L = 1;
-    if (L >= N) L = N - 1; // L은 무조건 N보다 작아야 함
+    // 유효성 재검사 및 엉뚱한 입력 제한 장치
+    if (isNaN(N) || N < 11) N = 11; // 너무 작거나 엉뚱한 입력이면 11
+    if (N >= 20) N = 19;            // 20 이상이면 19로 강제
+    
+    if (isNaN(L) || L < 1) L = 1;   // 음수나 텍스트 등 엉뚱한 입력이면 1
+    if (L >= N) L = N - 1;          // N 이상이면 N-1로 강제
 
     R = N - L;
     const looseCount = Math.max(0, N - 10);
@@ -114,8 +115,8 @@ function updateTitle() {
     const nParticle = hasBatchim(N) ? "은" : "는";
     const lParticle = hasBatchim(L) ? "과" : "와";
     
-    const inputN = `<input type="number" id="input-n" class="input-box" value="${N}" min="2" max="50">`;
-    const inputL = `<input type="number" id="input-l" class="input-box" value="${L}" min="1" max="49">`;
+    const inputN = `<input type="number" id="input-n" class="input-box" value="${N}" min="11" max="19">`;
+    const inputL = `<input type="number" id="input-l" class="input-box" value="${L}" min="1" max="${N - 1}">`;
     
     if (currentState < phases.length - 1) {
         // 정답을 알 수 없게 '로'로 고정
