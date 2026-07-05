@@ -312,7 +312,6 @@ button:active {
     border-radius: 30%;
     background: radial-gradient(circle at 30% 30%, #39ff14, #228b22);
     box-shadow: inset -3px -3px 5px rgba(0,0,0,0.3), inset 2px 2px 5px rgba(255,255,255,0.4), 2px 4px 6px rgba(0,0,0,0.2);
-    position: relative;
 }
 
 .theme-gonggi::after {
